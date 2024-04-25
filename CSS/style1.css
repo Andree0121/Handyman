@@ -1,0 +1,371 @@
+/*********************
+      NAVIGATION
+*********************/
+.nav-pane {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0px;
+    scroll-behavior: smooth;
+    z-index: 10;
+  }
+  
+  .nav-pane a{
+    display: flex;
+    text-decoration: none;
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    transition: .2s;
+  }
+  
+  .nav-pane #section-2:hover, #section-3:hover, #section-4:hover, #section-5:hover, #section-6:hover, #section-2:focus, #section-3:focus, #section-4:focus, #section-5:focus, #section-6:focus{
+    background: linear-gradient(to top, #c2baa6, transparent, transparent, transparent, transparent) transparent;
+    color: rgb(218, 146, 53);
+    border-radius: 5px;
+    
+  }
+  
+  .nav-pane #section-2:active, #section-3:active, #section-4:active, #section-5:active, #section-6:active {
+    color: #fff;
+    background: transparent;
+  }
+  
+  .to-top{
+    background-color: #ece8e1;
+    position: fixed;
+    bottom: 20px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    text-decoration: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .3s;
+    z-index: 99;
+  }
+  
+  .to-top.active{
+    bottom: 20px;
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .to-top:hover {
+    background-color: #dad6ce;
+  }
+
+  /*********************
+        FOOTER
+*********************/
+footer{
+    background-color: rgb(218, 146, 53); /*rgb(17, 17, 17);*/
+    height: 325px;
+  }
+  
+  .footer-container1{
+    margin-top: 200px;
+  }
+  
+  .flex-container{
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .footer-content{
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  
+  .footer-context {
+    margin-top: 15px;
+  }
+  
+  #logo{
+    width: 70px;
+    margin-top: -10px;
+    margin-right: 50px;
+  }
+  
+  #logo2{
+    width: 70px;
+  
+  }
+  
+  #logo1{
+    width: 50px;
+  }
+  
+  #facebook, #insta, #twitter {
+    width: 30px;
+  }
+  
+  #facebook:hover, #insta:hover, #twitter:hover, #logo:hover{
+    cursor: pointer;
+  }
+  
+  footer a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  footer a:hover{
+    text-decoration: underline;
+  }
+  
+  #facebook, #twitter {
+    margin-right: 50px;
+  }
+
+
+/*******************************************************************************************************
+
+                                            APPOINTMENT PAGE Modified Version
+
+********************************************************************************************************/
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.blur-bg {
+  background-image: url('../images/appoint-bg.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Prevent forms from overflowing */
+  filter: blur(3px) grayscale(80%); /* Blur effect and increased grayscale */
+}
+
+.forms-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center; /* Center the forms horizontally */
+  align-items: center; /* Center the forms vertically */
+}
+
+.form-left, .form-right {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(218, 146, 53, 1);/* Reduced opacity */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 15px 70px rgba(0, 0, 0, 1);
+  width: 500px; /* Limit maximum width of the forms */
+  border: 1px solid #575757;
+  height: 450px;
+}
+
+.form-left {
+  margin-right: 30px; /* Adjust spacing between forms */
+  position: relative; 
+}
+
+.image-container {
+  /* Center the image container */
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.image-container img {
+  width: 160px; /* Set the width of the image to fill its container */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 175px; /* Adjust position horizontally */
+  margin-top: 40px; /* Adjust position vertically */
+}
+
+/* RIGHT FORM */
+.form-right {
+  flex: 1; /* Set flex to fill available space */
+  padding: 20px;
+  background-color: rgba(218, 146, 53, 1); /* Reduced opacity */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 15px 70px rgba(0, 0, 0, 1);
+  width: 500px; /* Limit maximum width of the form */
+  border: 1px solid #575757;
+  height: 450px;
+  margin-right: 30px; /* Adjust spacing between forms */
+}
+
+.form-right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -70px;
+}
+
+.form-right input[type="text"],
+.form-right input[type="email"],
+.form-right input[type="tel"],
+.form-right input[type="date"] {
+  border: none; /* Remove the border */
+  border-bottom: 1px solid #083C59; /* Add a bottom border */
+  outline: none; /* Remove the outline */
+  margin-bottom: 10px;
+  width: 80%; /* Adjust width of inputs */
+  height: 20px;
+  background-color: rgba(218, 146, 53, 1);
+  color: #000;
+  font-weight: bold;
+}
+
+/* Change the color of the placeholder text */
+.form-right input[type="text"]::placeholder,
+.form-right input[type="email"]::placeholder,
+.form-right input[type="tel"]::placeholder,
+.form-right textarea::placeholder,
+.form-right input[type="date"]::placeholder {
+  color: #575757; /* Set the desired placeholder text color */
+  font-weight: bold;
+}
+
+.form-right label {
+  color: #083C59; /* Set the label color */
+  margin-left: -73px;
+  font-weight: bold;
+}
+
+
+.form-right textarea{
+  margin-bottom: 10px;
+  width: 80%; /* Adjust width of inputs */
+  border: 1px solid #083C59; /* Add a bottom border */
+  background-color: rgba(218, 146, 53, 1);
+}
+
+/* Additional styling for textarea */
+.form-right textarea {
+  resize: none; /* Disable resizing */
+  font-weight: bold;
+}
+
+
+/* Ensure buttons are displayed inline */
+.button-container form {
+  display: inline-block;
+}
+/* Optional: Add spacing between buttons */
+.button-container form:not(:first-child) {
+  margin-left: 10px; /* Adjust as needed */
+}
+
+/*Select Container*/
+.select-container {
+  background-color: rgba(36, 100, 137, 1);
+  width: 250px;
+  height: 35px;
+  margin-left: 125px;
+  justify-content: center;
+  display: flex;
+  box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.6); /* Add box shadow */
+  border-radius: 10px;
+}
+
+/* Option Select */
+
+.form-select {
+  border: none; /* Remove border */
+  border-radius: 5px;
+  color: #cf882b;
+  background-color: rgba(36, 100, 137, 1);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1{
+  color: rgba(36, 100, 137, 1);
+  font-family: "Rubik Scribble", system-ui;
+  font-size: 2em;
+}
+
+#showRightFormButton {
+  border: none; 
+  width: 40px;
+  position: absolute; /* Change to absolute positioning */
+  bottom: 20px; /* Adjust this value to move the button up */
+  left: 440px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#showRightFormButton:disabled {
+  opacity: 0.5; /* Adjust the opacity value as needed */
+}
+
+
+#showLeftFormButton{
+  margin-left: -100px;
+}
+
+#btnLogout{
+  margin-top: -450px;
+  margin-right: -357px;
+}
+
+#showLeftFormButton {
+  border: none; 
+  width: 40px;
+  position: absolute; /* Change to absolute positioning */
+  bottom: 20px; /* Adjust this value to move the button up */
+  right: 472px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#btnLogout, #btnSubmit,#showLeftFormButton,#showRightFormButton {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add a transition for the button */
+}
+
+#btnLogout:hover, #btnSubmit:hover, #showLeftFormButton:hover,#showRightFormButton:hover {
+  transform: scale(1.1); /* Enlarge the button on hover */
+}
+
+#btnLogout:active, #btnSubmit:active, #showLeftFormButton:active,#showRightFormButton:active  {
+  transform: scale(0.9); /* Shrink the button when clicked */
+}
+
+#btnSubmit {
+  margin-right: -325px;
+  color: #246489;
+  border: 1px solid #246489;
+  padding: 5px;
+}
+
+#btnLogout {
+  margin-right: -325px;
+  margin-bottom: -90px;
+  color: #DA9235;
+  background-color: #246489;
+  padding: 5px;
+}
